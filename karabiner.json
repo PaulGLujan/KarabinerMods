@@ -16,10 +16,10 @@
         },
         "rules": [
           {
-            "description": "CAPS LOCK + hjkl to arrow keys",
+            "description": "****CAPS LOCK + hjkl to arrow keys*****",
             "manipulators": [
               {
-                "description": "j => down arrow",
+                "description": "*****j => down arrow*****",
                 "conditions": [
                   {
                     "name": "caps_lock pressed",
@@ -41,7 +41,7 @@
                 "type": "basic"
               },
               {
-                "description": "k => up arrow",
+                "description": "*****k => up arrow*****",
                 "conditions": [
                   {
                     "name": "caps_lock pressed",
@@ -63,7 +63,7 @@
                 "type": "basic"
               },
               {
-                "description": "h => left arrow",
+                "description": "*****h => left arrow*****",
                 "conditions": [
                   {
                     "name": "caps_lock pressed",
@@ -85,7 +85,7 @@
                 "type": "basic"
               },
               {
-                "description": "l => right arrow",
+                "description": "*****l => right arrow*****",
                 "conditions": [
                   {
                     "name": "caps_lock pressed",
@@ -107,7 +107,7 @@
                 "type": "basic"
               },
               {
-                "description": "swipe to left screen",
+                "description": "*****swipe to left screen*****",
                 "type": "basic",
                 "from": {
                   "key_code": "semicolon",
@@ -130,7 +130,7 @@
                 ]
               },
               {
-                "description": "swipe to right screen",
+                "description": "*****swipe to right screen*****",
                 "type": "basic",
                 "from": {
                   "key_code": "quote",
@@ -142,6 +142,28 @@
                   {
                     "key_code": "right_arrow",
                     "modifiers": ["left_control"]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "name": "caps_lock pressed",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "*****CAPS LOCK + space = ESC *****",
+                "type": "basic",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "escape"
                   }
                 ],
                 "conditions": [
